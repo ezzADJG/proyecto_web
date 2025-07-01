@@ -68,11 +68,11 @@ proyecto_nodejs/
 
 4. **Inicia el servidor:**
    ```
-   node app.js
+   node src/server.js
    ```
    o si usas nodemon:
    ```
-   npx nodemon app.js
+   npx nodemon node src/server.js
    ```
 
 5. **Abre tu navegador en:**
@@ -130,6 +130,3 @@ Día 3|Machu Picchu|Excursión guiada y tiempo libre para explorar.
 Este proyecto es solo para fines educativos y de demostración.
 
 ---
-
-¿Dudas o sugerencias?  
-¡Crea un issue o contacta al

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tours</title>
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/tours.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header container">
+      <a href="/" class="container-logo">
+        <img src="img/logo.png" alt="Logo" />
+        <span class="logo-text"> Adventure Travel </span>
+      </a>
+
+      <nav class="nav-links">
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="container-sign">
+        <li class="sign-item" id="perfilLink" style="display: none">
+          <a class="sign-in" href="#" id="perfilLink"></a>
+        </li>
+
+        <li class="sign-item">
+          <button
+            onclick="cerrarSesion()"
+            class="closeBtn sign-up"
+            style="display: none"
+            id="closeBtn"
+          >
+            Cerrar sesión
+          </button>
+        </li>
+
+        <li class="sign-item" id="login">
+          <a class="sign-in" href="login.html">Entrar</a>
+        </li>
+
+        <li class="sign-item" id="register">
+          <a class="sign-up" href="register.html">Registrarse</a>
+        </li>
+      </ul>
+
+      <button class="btn-bars">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+
+      <nav class="menu-responsive">
+        <a href="/" class="container-logo-responsive">
+          <img src="img/logo.png" alt="Logo" />
+          <span class="logo-text"> Adventure Travel </span>
+        </a>
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+          <li id="login_responsive">
+            <a class="sign-in" href="login.html">Entrar</a>
+          </li>
+          <li id="register_responsive">
+            <a class="sign-up" href="register.html">Registrarse</a>
+          </li>
+          <li
+            class="sign-item"
+            id="perfilLink_responsive"
+            style="display: none"
+          ></li>
+        </ul>
+
+        <button class="btn-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="background-hero-banner">
+      <div class="container container-hero-banner">
+        <div class="column-1">
+          <h1>Elige tu paquete de viaje favorito</h1>
+
+          <p>
+            Explora nuestras increíbles ofertas de destinos con una lista
+            completa que incluye todos los lugares maravillosos que puedes
+            visitar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+      <section class="main-tours">
+        <!-- BARRA DE BÚSQUEDA Y ORDENAMIENTO -->
+        <div class="container-search-sort">
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="search-tours"
+              placeholder="Buscar tours por nombre, ubicación, tipo..."
+            />
+          </div>
+          <div class="sort-container">
+            <label for="sort-tours">Ordenar por:</label>
+            <select id="sort-tours">
+              <option value="">Recomendados</option>
+              <option value="precio-asc">Precio: Menor a Mayor</option>
+              <option value="precio-desc">Precio: Mayor a Menor</option>
+              <option value="rating-desc">Mejor Calificados</option>
+              <option value="nombre-asc">Nombre A-Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- FILTROS TIPO PESTAÑAS (TABS) -->
+        <div class="filters-tabs-panel-wrapper">
+          <div class="filters-tabs-bar">
+            <button class="tab-filter active" data-tab="ubicacion">
+              <i class="fa-solid fa-location-dot"></i> Ubicación
+            </button>
+            <button class="tab-filter" data-tab="tipo">
+              <i class="fa-solid fa-mountain-sun"></i> Tipo de Tour
+            </button>
+            <button class="tab-filter" data-tab="precio">
+              <i class="fa-solid fa-money-bill-wave"></i> Precio
+            </button>
+            <button class="tab-filter" data-tab="duracion">
+              <i class="fa-solid fa-clock"></i> Duración
+            </button>
+            <button class="tab-filter" data-tab="calificacion">
+              <i class="fa-solid fa-star"></i> Calificación
+            </button>
+          </div>
+          <div class="filters-tabs-panels">
+            <!-- Panel Ubicación -->
+            <div class="tab-panel active" data-panel="ubicacion">
+              <label><input type="checkbox" value="lima" /> Lima</label>
+              <label><input type="checkbox" value="cusco" /> Cusco</label>
+              <label><input type="checkbox" value="arequipa" /> Arequipa</label>
+              <label><input type="checkbox" value="puno" /> Puno</label>
+              <label><input type="checkbox" value="trujillo" /> Trujillo</label>
+              <label><input type="checkbox" value="chiclayo" /> Chiclayo</label>
+              <label><input type="checkbox" value="piura" /> Piura</label>
+              <label><input type="checkbox" value="tacna" /> Tacna</label>
+              <label><input type="checkbox" value="iquitos" /> Iquitos</label>
+              <label><input type="checkbox" value="tarapoto" /> Tarapoto</label>
+            </div>
+            <!-- Panel Tipo de Tour -->
+            <div class="tab-panel" data-panel="tipo">
+              <label><input type="checkbox" value="aventura" /> Aventura</label>
+              <label><input type="checkbox" value="cultural" /> Cultural</label>
+              <label><input type="checkbox" value="playa" /> Playa</label>
+              <label
+                ><input type="checkbox" value="senderismo" /> Senderismo</label
+              >
+              <label><input type="checkbox" value="romance" /> Romance</label>
+              <label><input type="checkbox" value="familiar" /> Familiar</label>
+              <label><input type="checkbox" value="deportes" /> Deportes</label>
+            </div>
+            <!-- Panel Precio -->
+            <div class="tab-panel" data-panel="precio">
+              <label
+                ><input type="checkbox" value="0-500" /> Menos de S/ 500</label
+              >
+              <label
+                ><input type="checkbox" value="500-1000" /> S/ 500 - S/
+                1,000</label
+              >
+              <label
+                ><input type="checkbox" value="1000-2000" /> S/ 1,000 - S/
+                2,000</label
+              >
+              <label
+                ><input type="checkbox" value="2000-5000" /> S/ 2,000 - S/
+                5,000</label
+              >
+              <label
+                ><input type="checkbox" value="5000+" /> Más de S/ 5,000</label
+              >
+            </div>
+            <!-- Panel Duración -->
+            <div class="tab-panel" data-panel="duracion">
+              <label><input type="checkbox" value="1-3" /> 1-3 días</label>
+              <label><input type="checkbox" value="4-7" /> 4-7 días</label>
+              <label><input type="checkbox" value="8-14" /> 8-14 días</label>
+              <label><input type="checkbox" value="15+" /> 15+ días</label>
+            </div>
+            <!-- Panel Calificación -->
+            <div class="tab-panel" data-panel="calificacion">
+              <label
+                ><input type="radio" name="calificacion" value="5" />
+                <span class="stars">★★★★★</span> 5 estrellas</label
+              >
+              <label
+                ><input type="radio" name="calificacion" value="4" />
+                <span class="stars">★★★★☆</span> 4+ estrellas</label
+              >
+              <label
+                ><input type="radio" name="calificacion" value="3" />
+                <span class="stars">★★★☆☆</span> 3+ estrellas</label
+              >
+              <label
+                ><input type="radio" name="calificacion" value="2" />
+                <span class="stars">★★☆☆☆</span> 2+ estrellas</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTADOR DE TOURS -->
+        <div class="container-tours-info">
+          <span id="contador-tours">0 tours encontrados</span>
+        </div>
+
+        <!-- CONTENEDOR DE TOURS -->
+        <div class="container-tours" id="contenedorTours"></div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-content">
+        <div class="columns-footer">
+          <div class="column">
+            <a href="/" class="container-logo">
+              <img src="img/logo.png" alt="Logo" />
+              <span class="logo-text"> Adventure Travel </span>
+            </a>
+
+            <p>
+              Somos más que una agencia de viajes,<br />
+              somos tu aliado perfecto para una<br />
+              experiencia inolvidable.
+            </p>
+
+            <div class="container-social-links">
+              <span> Síguenos:</span>
+              <div class="links">
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <span> Sobre Nosotros </span>
+
+            <ul>
+              <li>
+                <a href="#">Nuestra historia</a>
+              </li>
+              <li>
+                <a href="#">Blog Viajes y Consejos</a>
+              </li>
+              <li>
+                <a href="#">Trabaja con nosotros</a>
+              </li>
+              <li>
+                <a href="#">Términos y Condiciones</a>
+              </li>
+              <li>
+                <a href="#">Preguntas Frecuentes</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Soporte </span>
+
+            <ul>
+              <li>
+                <a href="#">Soporte al Cliente</a>
+              </li>
+              <li>
+                <a href="#">Políticas de Privacidad</a>
+              </li>
+              <li>
+                <a href="contacto.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Paga de forma segura con nosotros </span>
+
+            <p>
+              El pago es encriptado y transmitido de forma segura con el
+              protocolo SSL.
+            </p>
+
+            <div class="container-payment-methods">
+              <img src="img/payment-methods.png" alt="Métodos de Pago" />
+            </div>
+          </div>
+        </div>
+
+        <p class="copyright">
+          &copy; 2025 JD Adventure Travel | Derechos Reservados
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/global.js"></script>
+    <script src="./js/tour.js"></script>
+    <script src="./js/catalogo.js"></script>
+    <script src="./js/greetings.js"></script>
+  </body>
+</html>

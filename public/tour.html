@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle del Tour</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/tour-detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header container">
+      <a href="/" class="container-logo">
+        <img src="img/logo.png" alt="Logo" />
+        <span class="logo-text"> Adventure Travel </span>
+      </a>
+
+      <nav class="nav-links">
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="container-sign">
+        <li class="sign-item" id="perfilLink" style="display: none">
+          <a class="sign-in" href="#" id="perfilLink"></a>
+        </li>
+
+        <li class="sign-item">
+          <button
+            onclick="cerrarSesion()"
+            class="closeBtn sign-up"
+            style="display: none"
+            id="closeBtn"
+          >
+            Cerrar sesión
+          </button>
+        </li>
+
+        <li class="sign-item" id="login">
+          <a class="sign-in" href="login.html">Entrar</a>
+        </li>
+
+        <li class="sign-item" id="register">
+          <a class="sign-up" href="register.html">Registrarse</a>
+        </li>
+      </ul>
+
+      <button class="btn-bars">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+
+      <nav class="menu-responsive">
+        <a href="/" class="container-logo-responsive">
+          <img src="img/logo.png" alt="Logo" />
+          <span class="logo-text"> Adventure Travel </span>
+        </a>
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+          <li id="login_responsive">
+            <a class="sign-in" href="login.html">Entrar</a>
+          </li>
+          <li id="register_responsive">
+            <a class="sign-up" href="register.html">Registrarse</a>
+          </li>
+          <li
+            class="sign-item"
+            id="perfilLink_responsive"
+            style="display: none"
+          ></li>
+        </ul>
+
+        <button class="btn-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </nav>
+    </header>
+
+    <section class="container section-hero-banner">
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#detail">Detalles</a>
+          </li>
+          <li>
+            <a href="#itinerary">Itinerario</a>
+          </li>
+          <li>
+            <a href="#gallery">Gallería</a>
+          </li>
+          <li>
+            <a href="#reviews">Reseñas</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1></h1>
+
+      <div class="container-reviews">
+        <span class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </span>
+        <span class="count-reviews"></span>
+      </div>
+
+      <div class="info">
+        <div class="info-item-duracion">
+          <i class="fa-regular fa-clock"></i> <span>5 Horas</span>
+        </div>
+        <div class="info-item-cantidad">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Max 20 personas</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-wifi"></i>
+          <span>Wifi Disponible</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-calendar"></i>
+          <span>Agosto - Septiembre</span>
+        </div>
+      </div>
+
+      <div class="container-img">
+        <img
+          src="img/tour-detail/detalle-tour-banner-hero.avif"
+          alt="Detalle Tour"
+        />
+      </div>
+    </section>
+
+    <main class="container main-content">
+      <section class="section-detail">
+        <h2 class="title" id="detail">Detalles</h2>
+
+        <p>
+          ¿Estás buscando una aventura única en la vida? Únete a nosotros en un
+          viaje inolvidable a través de algunos de los paisajes y destinos
+          culturales más impresionantes del mundo. Nuestros tours cuidadosamente
+          diseñados te llevarán a destinos increíbles, desde las montañas
+          escarpadas de la Patagonia hasta las vibrantes ciudades de Asia.
+        </p>
+
+        <p>
+          Nuestros itinerarios están diseñados para sumergirte en la cultura
+          local, con oportunidades para conocer a los locales, probar nuevas
+          comidas y aprender sobre la historia y tradiciones de cada destino.
+          Nuestros guías expertos te acompañarán en cada destino, compartiendo
+          sus conocimientos y su pasión por viajar. Ofrecemos una amplia gama de
+          actividades para cada tipo de viajero, desde senderismo y kayak hasta
+          tours culturales y experiencias gastronómicas.
+        </p>
+      </section>
+
+      <section class="includes-excludes">
+        <div class="includes">
+          <h3>Incluye:</h3>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span>Desayuno, almuerzo y cena</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span> Guía turístico profesional </span>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span> Traslados entre destinos </span>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span> Entradas a museos </span>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span> Alojamiento en hotel </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="excludes">
+          <h3>No Incluye:</h3>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-times"></i>
+              <span>Tarifa por el servicio del guía</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-times"></i>
+              <span> Tarifa por el servicio del conductor </span>
+            </li>
+            <li>
+              <i class="fa-solid fa-times"></i>
+              <span>Itinerario personalizado</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="expect">
+        <h3>¿Qué Esperar?</h3>
+        <p>
+          Una calma deliciosa ha llenado completamente mi espíritu, como las
+          suaves mañanas de primavera que llenan mi corazón de alegría. En este
+          lugar pacífico, diseñado para almas que buscan una satisfacción pura,
+          me encuentro solo y, sin embargo, profundamente conectado con la
+          belleza de la existencia. Mi felicidad es completa, ya que me pierdo
+          en el sereno placer de simplemente estar, tanto que olvido mis
+          ocupaciones habituales.
+        </p>
+        <ul>
+          <li>Explora las históricas murallas de la ciudad.</li>
+          <li>Pasea por el encantador bosque.</li>
+          <li>Visita el famoso mirador "La Alondra".</li>
+          <li>Disfruta de un crucero al atardecer.</li>
+        </ul>
+      </section>
+
+      <section class="extras">
+        <div class="book-with-confidence">
+          <h3>Reserva con Confianza</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-thumbs-up"></i>
+              Garantía de mejor precio
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              Atención al cliente disponible 24/7
+            </li>
+            <li>
+              <i class="fa-regular fa-star"></i>
+              Tours y actividades seleccionados
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-halved"></i>
+              Seguro de viaje gratuito
+            </li>
+          </ul>
+        </div>
+        <div class="need-help">
+          <h3>¿Necesitas Ayuda?</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              Atención al cliente disponible 24/7
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              Tours y actividades a medida
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <section class="container call-to-action">
+      <span> Más vendido </span>
+
+      <div class="price-btn-booking">
+        <p class="price"></p>
+        <a href="booking.html">Reservar Ahora</a>
+      </div>
+    </section>
+
+    <section class="container section-itinerary">
+      <h2 class="title" id="itinerary">Itinerario</h2>
+    </section>
+
+    <section class="container section-gallery">
+      <h2 class="title" id="gallery">Galería</h2>
+
+      <div class="grid-gallery">
+        <div class="gallery-item">
+          <img src="img/tour-detail/gallery-tour-1.avif" alt="Galería Tour" />
+        </div>
+        <div class="gallery-item">
+          <img src="img/tour-detail/gallery-tour-2.avif" alt="Galería Tour" />
+        </div>
+        <div class="gallery-item">
+          <img src="img/tour-detail/gallery-tour-3.avif" alt="Galería Tour" />
+        </div>
+        <div class="gallery-item">
+          <img src="img/tour-detail/gallery-tour-4.avif" alt="Galería Tour" />
+        </div>
+        <div class="gallery-item">
+          <img src="img/tour-detail/gallery-tour-5.avif" alt="Galería Tour" />
+        </div>
+        <div class="gallery-item">
+          <img src="img/tour-detail/gallery-tour-6.avif" alt="Galería Tour" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container section-reviews">
+      <h2 class="title" id="reviews">Reseñas de usuario</h2>
+      <div class="container-cards-review" id="contenedorResenas"></div>
+    </section>
+	
+    <section class="container section-add-review" id="sectionAddReview" style="display:none;">
+      <h2 class="title">Publicar una reseña</h2>
+      <form id="formResena">
+        <textarea id="comentario" placeholder="Tu comentario..." required></textarea>
+        <input type="number" id="calificacion" min="1" max="5" placeholder="Calificación (1-5)" required />
+        <button type="submit">Enviar Reseña</button>
+        <p id="mensajeResena"></p>
+      </form>
+    </section>
+
+    <section class="container section-tours-related">
+      <h2 class="title">Tours Relacionados</h2>
+
+      <div class="container-cards-tours" id="contenedorToursRelacionados"></div>
+    </section>
+	
+	<div id="modalReserva" class="modal-reserva" style="display:none;">
+  		<div class="modal-content">
+   		 <span class="close-modal" id="closeModalReserva">&times;</span>
+			<section class="container section-container-form" style="margin:0;">
+					<h2>Reserva tu Tour</h2>
+					<form class="form" id="formReserva">
+						<div class="form-section">
+							<h3>Información</h3>
+
+							<div class="form-group">
+								<label for="name">Nombre</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									required
+									placeholder="Escribe tu nombre"
+									readonly
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="email">Correo Electrónico</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									required
+									placeholder="Escribe tu correo electrónico"
+									readonly
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="tourName">Nombre del Tour</label>
+								<input
+									type="text"
+									id="tourName"
+									name="tourName"
+									required
+									readonly
+									placeholder="Nombre del tour"
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="type">Tipo de Tour</label>
+								<input
+									type="text"
+									id="type"
+									name="type"
+									required
+									readonly
+									placeholder="Tipo de tour"
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="guests">Invitados</label>
+								<select name="guests" id="guests">
+									<option value="" disabled selected>Seleccione</option>
+									<option value="3">3 Invitados</option>
+									<option value="4">4 Invitados</option>
+									<option value="5">5 Invitados</option>
+									<option value="7">7 Invitados</option>
+									<option value="10">10 Invitados</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="country">País</label>
+								<select name="country" id="country">
+									<option value="" disabled selected>Seleccione</option>
+									<option value="ecuador">Ecuador</option>
+									<option value="mexico">México</option>
+									<option value="usa">Estados Unidos</option>
+									<option value="canada">Canadá</option>
+									<option value="japon">Japón</option>
+									<option value="china">China</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<!-- PICKUP Address -->
+								<label for="pickup">Dirección de Recogida</label>
+								<input
+									type="text"
+									id="pickup"
+									name="pickup"
+									required
+									placeholder="Escribe la dirección de recogida"
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="checkin">Salida</label>
+								<input type="date" id="checkin" name="checkin" required />
+							</div>
+
+							<div class="form-group">
+								<label for="checkout">Regreso</label>
+								<input
+									type="date"
+									id="checkout"
+									name="checkout"
+									required
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="precio">Precio</label>
+								<input
+									type="text"
+									id="precio"
+									name="precio"
+									readonly
+									placeholder="Precio del tour"
+								/>
+							</div>
+						</div>
+
+						<div class="form-section">
+							<h3>Reserva de Hotel</h3>
+
+							<div class="form-group">
+								<label for="hotel">Hotel</label>
+								<select name="hotel" id="hotel">
+									<option value="" disabled selected>Seleccione</option>
+									<option value="hotel1">Hotel 1</option>
+									<option value="hotel2">Hotel 2</option>
+									<option value="hotel3">Hotel 3</option>
+									<option value="hotel4">Hotel 4</option>
+									<option value="hotel5">Hotel 5</option>
+								</select>
+							</div>
+
+							<div class="form-group-double">
+								<div class="column">
+									<label for="rooms">Habitaciones</label>
+									<select name="rooms" id="rooms">
+										<option value="" disabled selected>Seleccione</option>
+										<option value="1">1 Habitación</option>
+										<option value="2">2 Habitaciones</option>
+										<option value="3">3 Habitaciones</option>
+										<option value="4">4 Habitaciones</option>
+										<option value="5">5 Habitaciones</option>
+									</select>
+								</div>
+
+								<div class="column">
+									<label for="option">Opcional</label>
+									<select name="option" id="option">
+										<option value="" disabled selected>Seleccione</option>
+										<option value="breakfast">Desayuno</option>
+										<option value="lunch">Almuerzo</option>
+										<option value="dinner">Cena</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-form">
+							<div class="price-btn-booking">
+								<button type="submit">Reservar Ahora</button>
+								<p id="mensajeReserva"></p>
+							</div>
+						</div>
+					</form>
+			</section>
+		</div>
+	</div>
+			
+
+
+    <footer>
+      <div class="container footer-content">
+        <div class="columns-footer">
+          <div class="column">
+            <a href="/" class="container-logo">
+              <img src="img/logo.png" alt="Logo" />
+              <span class="logo-text"> Adventure Travel </span>
+            </a>
+
+            <p>
+              Somos más que una agencia de viajes,<br />
+              somos tu aliado perfecto para una<br />
+              experiencia inolvidable.
+            </p>
+
+            <div class="container-social-links">
+              <span> Síguenos:</span>
+              <div class="links">
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <span> Sobre Nosotros </span>
+
+            <ul>
+              <li>
+                <a href="#">Nuestra historia</a>
+              </li>
+              <li>
+                <a href="#">Blog Viajes y Consejos</a>
+              </li>
+              <li>
+                <a href="#">Trabaja con nosotros</a>
+              </li>
+              <li>
+                <a href="#">Términos y Condiciones</a>
+              </li>
+              <li>
+                <a href="#">Preguntas Frecuentes</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Soporte </span>
+
+            <ul>
+              <li>
+                <a href="#">Soporte al Cliente</a>
+              </li>
+              <li>
+                <a href="#">Políticas de Privacidad</a>
+              </li>
+              <li>
+                <a href="contacto.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Paga de forma segura con nosotros </span>
+
+            <p>
+              El pago es encriptado y transmitido de forma segura con el
+              protocolo SSL.
+            </p>
+
+            <div class="container-payment-methods">
+              <img src="img/payment-methods.png" alt="Métodos de Pago" />
+            </div>
+          </div>
+        </div>
+
+        <p class="copyright">
+          &copy; 2025 JD Adventure Travel | Derechos Reservados
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/detalleTour.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/global.js"></script>
+  </body>
+</html>

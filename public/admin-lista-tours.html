@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agencia de Tours</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/lista.css" />
+  </head>
+  <body>
+
+    <header class="header container">
+      <a href="/" class="container-logo">
+        <img src="img/logo.png" alt="Logo" />
+        <span class="logo-text"> Adventure Travel </span>
+      </a>
+
+      <nav class="nav-links">
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="container-sign">
+        <li class="sign-item" id="perfilLink" style="display: none">
+          <a class="sign-in" href="#" id="perfilLink"></a>
+        </li>
+
+        <li class="sign-item">
+          <button
+            onclick="cerrarSesion()"
+            class="closeBtn sign-up"
+            style="display: none"
+            id="closeBtn"
+          >
+            Cerrar sesión
+          </button>
+        </li>
+
+        <li class="sign-item" id="login">
+          <a class="sign-in" href="login.html">Entrar</a>
+        </li>
+
+        <li class="sign-item" id="register">
+          <a class="sign-up" href="register.html">Registrarse</a>
+        </li>
+      </ul>
+
+      <button class="btn-bars">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+
+      <nav class="menu-responsive">
+        <a href="/" class="container-logo-responsive">
+          <img src="img/logo.png" alt="Logo" />
+          <span class="logo-text"> Adventure Travel </span>
+        </a>
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+          <li id="login_responsive">
+            <a class="sign-in" href="login.html">Entrar</a>
+          </li>
+          <li id="register_responsive">
+            <a class="sign-up" href="register.html">Registrarse</a>
+          </li>
+          <li
+            class="sign-item"
+            id="perfilLink_responsive"
+            style="display: none"
+          ></li>
+        </ul>
+
+        <button class="btn-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </nav>
+    </header>
+
+    <section>
+      <div class="title-section">
+        <h2>Lista de Tours</h2>
+      </div>
+      <div id="listaTours"></div>
+    </section>
+
+    <footer>
+      <div class="container footer-content">
+        <div class="columns-footer">
+          <div class="column">
+            <a href="/" class="container-logo">
+              <img src="img/logo.png" alt="Logo" />
+              <span class="logo-text"> Adventure Travel </span>
+            </a>
+
+            <p>
+              Somos más que una agencia de viajes,<br />
+              somos tu aliado perfecto para una<br />
+              experiencia inolvidable.
+            </p>
+
+            <div class="container-social-links">
+              <span> Síguenos:</span>
+              <div class="links">
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <span> Sobre Nosotros </span>
+
+            <ul>
+              <li>
+                <a href="#">Nuestra historia</a>
+              </li>
+              <li>
+                <a href="#">Blog Viajes y Consejos</a>
+              </li>
+              <li>
+                <a href="#">Trabaja con nosotros</a>
+              </li>
+              <li>
+                <a href="#">Términos y Condiciones</a>
+              </li>
+              <li>
+                <a href="#">Preguntas Frecuentes</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Soporte </span>
+
+            <ul>
+              <li>
+                <a href="#">Soporte al Cliente</a>
+              </li>
+              <li>
+                <a href="#">Políticas de Privacidad</a>
+              </li>
+              <li>
+                <a href="contacto.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Paga de forma segura con nosotros </span>
+
+            <p>
+              El pago es encriptado y transmitido de forma segura con el
+              protocolo SSL.
+            </p>
+
+            <div class="container-payment-methods">
+              <img src="img/payment-methods.png" alt="Métodos de Pago" />
+            </div>
+          </div>
+        </div>
+
+        <p class="copyright">
+          &copy; 2025 JD Adventure Travel | Derechos Reservados
+        </p>
+      </div>
+    </footer>
+    
+    <script src="/js/admin-lista-tours.js"></script>
+    <script src="./js/greetings.js"></script>
+    <script src="./js/global.js"></script>
+  </body>
+</html>

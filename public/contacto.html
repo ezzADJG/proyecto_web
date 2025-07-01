@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header container">
+      <a href="/" class="container-logo">
+        <img src="img/logo.png" alt="Logo" />
+        <span class="logo-text"> Adventure Travel </span>
+      </a>
+
+      <nav class="nav-links">
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="container-sign">
+        <li class="sign-item" id="perfilLink" style="display: none">
+          <a class="sign-in" href="#" id="perfilLink"></a>
+        </li>
+
+        <li class="sign-item">
+          <button
+            onclick="cerrarSesion()"
+            class="closeBtn sign-up"
+            style="display: none"
+            id="closeBtn"
+          >
+            Cerrar sesión
+          </button>
+        </li>
+
+        <li class="sign-item" id="login">
+          <a class="sign-in" href="login.html">Entrar</a>
+        </li>
+
+        <li class="sign-item" id="register">
+          <a class="sign-up" href="register.html">Registrarse</a>
+        </li>
+      </ul>
+
+      <button class="btn-bars">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+
+      <nav class="menu-responsive">
+        <a href="/" class="container-logo-responsive">
+          <img src="img/logo.png" alt="Logo" />
+          <span class="logo-text"> Adventure Travel </span>
+        </a>
+        <ul>
+          <li>
+            <a href="catalogo.html">Tours</a>
+          </li>
+          <li>
+            <a href="about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+          <li id="login_responsive">
+            <a class="sign-in" href="login.html">Entrar</a>
+          </li>
+          <li id="register_responsive">
+            <a class="sign-up" href="register.html">Registrarse</a>
+          </li>
+          <li
+            class="sign-item"
+            id="perfilLink_responsive"
+            style="display: none"
+          ></li>
+        </ul>
+
+        <button class="btn-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </nav>
+    </header>
+
+    <section class="background-hero-banner">
+      <div class="container container-hero-banner">
+        <h1>Contáctanos</h1>
+
+        <p>¿Tienes alguna duda o sugerencia? ¡Contáctanos!</p>
+      </div>
+    </section>
+
+    <div class="container section-contact-info">
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Teléfono</h3>
+        <p>
+          JD Adventure Travel ofrece una experiencia fluida e intuitiva para los
+          viajeros que buscan su próxima aventura, con una llamada telefónica.
+        </p>
+        <a href="tel:+123456789">+1234-56789</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email</h3>
+        <p>
+          JD Adventure Travel ofrece una experiencia fluida e intuitiva para los
+          viajeros que buscan su próxima aventura, mediante correo electrónico.
+        </p>
+        <a href="mailto:jdadventure@gmail.com">jdadventure@gmail.com </a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Ubicación</h3>
+        <p>
+          JD Adventure Travel ofrece una experiencia fluida e intuitiva para los
+          viajeros que buscan su próxima aventura, visitándonos en nuestra
+          ubicación.
+        </p>
+        <a href="https://www.google.com/maps" target="_blank"
+          >Ver en Google Maps
+        </a>
+      </div>
+    </div>
+
+    <main class="container main-form">
+      <div class="content-form">
+        <span> Estamos en contacto </span>
+
+        <h2 class="title">Siéntete libre de contactarnos</h2>
+
+        <p>
+          Para cualquier consulta o asistencia, no dudes en ponerte en contacto
+          con nosotros. Estamos aquí para ayudarte y comprometidos a brindarte
+          el mejor soporte posible.
+        </p>
+        <div class="team-active">
+          <div class="container-users">
+            <i class="fa-solid fa-user fa-2x" style="color:#b6c6e3;"></i>
+            <i class="fa-solid fa-user fa-2x" style="color:#b6c6e3;"></i>
+            <i class="fa-solid fa-user fa-2x" style="color:#b6c6e3;"></i>
+            <i class="fa-solid fa-user fa-2x" style="color:#b6c6e3;"></i>
+            <div class="container-icon">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <span class="text-active">Activo ahora</span>
+        </div>
+      </div>
+
+      <form class="container-form" id="container-form">
+        <div class="group-form">
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre completo"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Número teléfono"
+            required
+          />
+          <input
+            type="text"
+            id="asunto"
+            name="asunto"
+            placeholder="Asunto"
+            required
+          />
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe un mensaje"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <section class="container container-map">
+      <h2 class="title">Ubicación</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5478.712229935715!2d-76.25450055261935!3d-13.836962729806377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x911062d8942674f3%3A0xb292160966de04cb!2sParacas!5e0!3m2!1ses-419!2spe!4v1750654409217!5m2!1ses-419!2spe"
+        width="1200"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-content">
+        <div class="columns-footer">
+          <div class="column">
+            <a href="/" class="container-logo">
+              <img src="img/logo.png" alt="Logo" />
+              <span class="logo-text"> Adventure Travel </span>
+            </a>
+
+            <p>
+              Somos más que una agencia de viajes,<br />
+              somos tu aliado perfecto para una<br />
+              experiencia inolvidable.
+            </p>
+
+            <div class="container-social-links">
+              <span> Síguenos:</span>
+              <div class="links">
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <span> Sobre Nosotros </span>
+
+            <ul>
+              <li>
+                <a href="#">Nuestra historia</a>
+              </li>
+              <li>
+                <a href="#">Blog Viajes y Consejos</a>
+              </li>
+              <li>
+                <a href="#">Trabaja con nosotros</a>
+              </li>
+              <li>
+                <a href="#">Términos y Condiciones</a>
+              </li>
+              <li>
+                <a href="#">Preguntas Frecuentes</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Soporte </span>
+
+            <ul>
+              <li>
+                <a href="#">Soporte al Cliente</a>
+              </li>
+              <li>
+                <a href="#">Políticas de Privacidad</a>
+              </li>
+              <li>
+                <a href="#">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <span> Paga de forma segura con nosotros </span>
+
+            <p>
+              El pago es encriptado y transmitido de forma segura con el
+              protocolo SSL.
+            </p>
+
+            <div class="container-payment-methods">
+              <img src="img/payment-methods.png" alt="Métodos de Pago" />
+            </div>
+          </div>
+        </div>
+
+        <p class="copyright">
+          &copy; 2025 JD Adventure Travel | Derechos Reservados
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/greetings.js"></script>
+    <script src="./js/contacto.js"></script>
+    <script src="./js/global.js"></script>
+  </body>
+</html>

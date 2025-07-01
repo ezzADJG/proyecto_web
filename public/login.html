@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="container container-login">
+      <div class="column">
+        <div class="container-content-login">
+          <a href="/" class="container-logo">
+            <img src="/img/logo.png" alt="Logo"/>
+            <span class="logo-text"> Adventure Travel </span>
+          </a>
+
+          <div class="container-form">
+            <h1>¡Hola!</h1>
+
+            <p>Bienvenido(a) a Agencia de viajes <br> JD Adventure Travel</p>
+
+            <div class="container-buttons">
+              <button>
+                <i class="fa-brands fa-google"></i>
+                Google
+              </button>
+            </div>
+
+            <div class="container-divider">
+              <span class="divider"></span>
+              <span class="text-divider">o</span>
+              <span class="divider"></span>
+            </div>
+
+            <div class="form">
+              <div class="container-input">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Correo electrónico"
+                />
+              </div>
+
+              <div class="container-input">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Contraseña"
+                />
+                <!-- icon -->
+                <i class="fa-solid fa-eye-slash" id="icon-eye"></i>
+              </div>
+
+              <div style="text-align: end; margin-bottom: 10px;"><a href="contacto.html">¿Olvidaste tu contraseña? Contactanos y explicanos tu situación</a></div>
+
+              <button id="loginBtn">Iniciar sesión</button>
+            </div>
+
+            <p class="link">
+              ¿No tienes una cuenta?
+              <a href="register.html">Regístrate</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column column-img">
+        <div class="container-img">
+          <img src="img/login.avif" alt="Imagen Login" />
+        </div>
+      </div>
+    </section>
+    <script src="./js/auth.js"></script>
+  </body>
+</html>

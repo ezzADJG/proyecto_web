@@ -1,0 +1,93 @@
+/* Estilos generales del perfil */
+#saludo {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a3a5d;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#contenidoPerfil {
+  max-width: 480px;
+  margin: 0 auto 32px auto;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 24px #0001;
+  min-height: 120px;
+  font-size: 1.1rem;
+}
+
+/* Panel de administrador */
+#contenidoPerfil.admin-panel {
+  border-left: 6px solid #e11d48;
+  background: linear-gradient(90deg, #fff 80%, #ffe4ec 100%);
+}
+
+#contenidoPerfil.admin-panel h3 {
+  color: #e11d48;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+#contenidoPerfil.admin-panel a {
+  display: inline-block;
+  margin: 8px 0;
+  color: #fff;
+  background: #1a3a5d;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+#contenidoPerfil.admin-panel a:hover {
+  background: #e11d48;
+}
+
+/* Panel de usuario */
+#contenidoPerfil.user-panel h3 {
+  color: #1a3a5d;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+#contenidoPerfil.user-panel p {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px #0001;
+}
+
+#contenidoPerfil.user-panel strong {
+  color: #e11d48;
+}
+
+button {
+  display: block;
+  margin: 24px auto 0 auto;
+  background: #e11d48;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 600px) {
+  #contenidoPerfil {
+    padding: 14px 4vw;
+    max-width: 98vw;
+  }
+}

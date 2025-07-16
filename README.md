@@ -128,5 +128,3 @@ Día 3|Machu Picchu|Excursión guiada y tiempo libre para explorar.
 ## 📄 Licencia
 
 Este proyecto es solo para fines educativos y de demostración.
-
----

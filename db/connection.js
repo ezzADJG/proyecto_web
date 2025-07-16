@@ -1,10 +1,11 @@
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-  host: 'sql.freedb.tech',
-  user: 'freedb_aldair',
-  password: '!8w$4tqsJ8Ut?EF',
-  database: 'freedb_turismo_web',
+  host: 'trolley.proxy.rlwy.net',
+  port: 22942,
+  user: 'root',
+  password: 'gqFhlXkjozIRtPiYUKFVorZliPRKjNnV',
+  database: 'railway',
   waitForConnections: true,
   connectionLimit: 10,
 });

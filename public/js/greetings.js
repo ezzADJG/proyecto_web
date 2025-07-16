@@ -1,7 +1,9 @@
+// Script para gestionar la visibilidad de elementos según el estado de sesión del usuario
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Verifica si el usuario está logueado
   const usuario = JSON.parse(localStorage.getItem('usuario'));
 
+  // Si no hay usuario logueado, mostrar el modal de aviso
   if (!usuario) {
     const modal = document.getElementById('modalAviso');
     modal.style.display = 'flex';
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // document.getElementById('saludo').innerText = `Bienvenido, ${usuario.nombre}`;
+  // Si hay usuario, mostrar enlaces de perfil y ocultar login/register
   document.getElementById('perfilLink').innerHTML = `<a href="perfil.html" class='sign-in'>Mi Perfil</a>`;
   document.getElementById('perfilLink_responsive').innerHTML = `<a href="perfil.html" class='sign-in'>Mi Perfil</a>`;
   const login = document.getElementById('login');
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// Función para cerrar sesión y limpiar datos del usuario
 function cerrarSesion() {
   localStorage.removeItem('usuario');
   alert('Sesión cerrada');

@@ -1,3 +1,4 @@
+// Configuración de la conexión a la base de datos MySQL usando un pool de conexiones
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
@@ -10,4 +11,4 @@ const pool = mysql.createPool({
   connectionLimit: 10,
 });
 
-module.exports = pool;
+module.exports = pool; // Exporta el pool para ser usado en otras partes del proyecto

@@ -1,3 +1,5 @@
+// Script principal para la gestión y filtrado del catálogo de tours
+
 document.addEventListener("DOMContentLoaded", async () => {
   let toursOriginales = [];
   let toursFiltrados = [];
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ratings: []
   };
 
+  // Carga los tours desde la API y los muestra en pantalla
   async function cargarTours() {
     const contenedor = document.getElementById("contenedorTours");
     try {
@@ -27,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  // Actualiza el contador de tours encontrados
   function actualizarContadorTours(cantidad) {
     const contador = document.getElementById('contador-tours');
     if (contador) {
@@ -34,6 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  // Renderiza las tarjetas de tours en el DOM
   function renderizarTours(tours) {
     const contenedor = document.getElementById("contenedorTours");
     contenedor.innerHTML = "";
@@ -55,11 +60,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       const card = document.createElement("div");
       card.className = "card-tour";
       
-      // Calcular estrellas basadas en el rating
+      // Genera las estrellas de calificación
       const rating = tour.rating || 0;
       const estrellas = generarEstrellas(rating);
       
-      // Formatear precio
+      // Formatea el precio en moneda local
       const precioFormateado = new Intl.NumberFormat('es-PE', {
         style: 'currency',
         currency: 'PEN'
@@ -113,11 +118,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
       `;
 
-      // Agregar event listeners
+      // Evento para guardar el ID del tour al ver detalles
       card.querySelector('.btn-detalles').addEventListener('click', function(e) {
         localStorage.setItem('tourId', tour.id);
       });
 
+      // Evento para reservar un tour (requiere login)
       card.querySelector('.btn-reservar').addEventListener('click', function(e) {
         e.preventDefault();
         if (localStorage.getItem('usuario')) {
@@ -132,6 +138,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Genera el HTML de las estrellas de calificación
   function generarEstrellas(rating) {
     const estrellasCompletas = Math.floor(rating);
     const tieneMediaEstrella = rating % 1 >= 0.5;
@@ -150,16 +157,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     return html;
   }
 
+  // Inicializa los tabs de filtros y sus eventos
   function inicializarTabsFiltros() {
     const tabs = document.querySelectorAll('.tab-filter');
     const panels = document.querySelectorAll('.tab-panel');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', function() {
-        // Activar pestaña
         tabs.forEach(t => t.classList.remove('active'));
         this.classList.add('active');
-        // Mostrar panel correspondiente
         const tabName = this.getAttribute('data-tab');
         panels.forEach(panel => {
           if (panel.getAttribute('data-panel') === tabName) {
@@ -171,7 +177,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
 
-    // Filtros dinámicos
     panels.forEach(panel => {
       panel.querySelectorAll('input[type="checkbox"]').forEach(cb => {
         cb.addEventListener('change', aplicarFiltrosTabs);
@@ -182,8 +187,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Aplica los filtros seleccionados en los tabs
   function aplicarFiltrosTabs() {
-    // Leer valores seleccionados de cada panel
     const ubicaciones = Array.from(document.querySelectorAll('.tab-panel[data-panel="ubicacion"] input[type="checkbox"]:checked')).map(cb => cb.value);
     const tipos = Array.from(document.querySelectorAll('.tab-panel[data-panel="tipo"] input[type="checkbox"]:checked')).map(cb => cb.value);
     const precios = Array.from(document.querySelectorAll('.tab-panel[data-panel="precio"] input[type="checkbox"]:checked')).map(cb => cb.value);
@@ -195,6 +200,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     aplicarFiltros();
   }
 
+  // Filtra los tours según los filtros activos
   function aplicarFiltros() {
     toursFiltrados = toursOriginales.filter(tour => {
       // Filtro por ubicacion

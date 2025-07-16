@@ -1,14 +1,18 @@
+// Script para agregar un nuevo tour desde el panel de administración
+
 document.addEventListener('DOMContentLoaded', () => {
   const usuario = JSON.parse(localStorage.getItem('usuario'));
+  // Solo permite acceso a administradores
   if (!usuario || usuario.rol !== 'admin') return location.href = 'login.html';
 
   const form = document.getElementById('formTour');
   const mensaje = document.getElementById('mensaje');
 
+  // Maneja el envío del formulario para crear un nuevo tour
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    // Validación simple: descripción corta obligatoria
+    // Validación: la descripción corta de "¿Qué esperar?" es obligatoria
     const descCorta = form.querySelector('[name="que_esperar"]').value.trim();
     if (!descCorta) {
       mensaje.innerText = 'La descripción corta de "¿Qué esperar?" es obligatoria.';

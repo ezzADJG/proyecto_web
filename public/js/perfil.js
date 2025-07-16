@@ -1,11 +1,16 @@
+// Script para mostrar el panel de perfil según el rol del usuario y listar sus reservas
+
 document.addEventListener('DOMContentLoaded', async () => {
   const usuario = JSON.parse(localStorage.getItem('usuario'));
+  // Si no hay usuario logueado, redirige a la página de login
   if (!usuario) return window.location.href = 'login.html';
 
+  // Muestra saludo personalizado
   document.getElementById('saludo').innerText = `Bienvenido, ${usuario.nombre}`;
 
   const contenedor = document.getElementById('contenidoPerfil');
 
+  // Si el usuario es administrador, muestra el panel de administración
   if (usuario.rol === 'admin') {
     contenedor.className = 'admin-panel';
     contenedor.innerHTML = `
@@ -14,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <a href="admin-lista-tours.html">Ver Tours</a>
     `;
   } else {
+    // Si es usuario normal, muestra sus reservas
     contenedor.className = 'user-panel';
     const res = await fetch(`/api/usuarios/${usuario.id}/reservas`);
     const reservas = await res.json();

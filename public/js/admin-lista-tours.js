@@ -1,11 +1,16 @@
+// Script para mostrar la lista de tours en el panel de administración y permitir su eliminación
+
 document.addEventListener('DOMContentLoaded', async () => {
   const usuario = JSON.parse(localStorage.getItem('usuario'));
+  // Solo permite acceso a administradores
   if (!usuario || usuario.rol !== 'admin') return location.href = 'login.html';
 
+  // Obtiene la lista de tours desde la API
   const res = await fetch('/api/tours');
   const tours = await res.json();
   const contenedor = document.getElementById('listaTours');
 
+  // Renderiza cada tour en una tarjeta con botón de eliminar
   tours.forEach(t => {
     const div = document.createElement('div');
     div.className = "admin-tour-card";
@@ -26,6 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 });
 
+// Función para eliminar un tour y recargar la lista
 async function eliminarTour(id) {
   const confirmar = confirm('¿Seguro que deseas eliminar este tour y todo lo relacionado?');
   if (!confirmar) return;

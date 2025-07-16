@@ -2,7 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Verifica si el usuario está logueado
   const usuario = JSON.parse(localStorage.getItem('usuario'));
 
-  if (!usuario) return alert('Te recordamos que debes iniciar sesión para disfrutar de nuestros servicios.');
+  if (!usuario) {
+    const modal = document.getElementById('modalAviso');
+    modal.style.display = 'flex';
+    document.getElementById('cerrarModalAviso').onclick = function() {
+      modal.style.display = 'none';
+    };
+    return;
+  }
 
   // document.getElementById('saludo').innerText = `Bienvenido, ${usuario.nombre}`;
   document.getElementById('perfilLink').innerHTML = `<a href="perfil.html" class='sign-in'>Mi Perfil</a>`;
